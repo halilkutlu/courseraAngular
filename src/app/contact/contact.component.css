@@ -9,3 +9,7 @@
 .form-size {
   width: 75%
 }
+
+h3, h4 {
+  font-weight: bold;
+}
