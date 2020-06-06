@@ -33,6 +33,7 @@ import {MatSliderModule} from '@angular/material/slider';
 import {HttpClientModule} from '@angular/common/http';
 import {baseURL} from './shared/baseurl';
 import {PromotionService} from './services/promotion.service';
+import {ProcessHTTPMsgService} from './services/process-httpmsg.service';
 
 
 
@@ -73,7 +74,11 @@ import {PromotionService} from './services/promotion.service';
   entryComponents: [
     LoginComponent
   ],
-  providers: [DishService, LeaderService, PromotionService, {provide: 'BaseURL', useValue: baseURL}],
+  providers: [DishService,
+    LeaderService,
+    PromotionService,
+    ProcessHTTPMsgService,
+    {provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
