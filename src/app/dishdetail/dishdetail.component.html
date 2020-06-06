@@ -14,7 +14,7 @@
   </div>
 
   <div fxFlex="40">
-    <mat-card *ngIf="dish">
+    <mat-card *ngIf="dish" [@visibility]="visibility">
       <img mat-card-image src="{{ BaseURL + dish.image }}" alt={{dish.name}}>
       <mat-card-content>
         <p>{{dish.description}}
@@ -39,7 +39,7 @@
   </div>
 
   <div fxFlex="40">
-    <mat-list *ngIf="dish">
+    <mat-list *ngIf="dish" [@visibility]="visibility">
       <h1>Comments</h1>
       <mat-list-item *ngFor="let comment of dish.comments">
         <p mat-line>{{comment.comment}}</p>
